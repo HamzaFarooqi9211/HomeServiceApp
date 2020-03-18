@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="Signin">Sign In</string>
+    <string name="phone">Phone</string>
+    <string name="pass">Password</string>
+    <string name="forgotpass">Forgot Password?</string>
+    <string name="register">Register</string>
+    <string name="fullName">Full Name</string>
+    <string name="cnic">CNIC</string>
+    <string name="scanned">CNIC Scanned Copy</string>
+    <string name="upload">Upload</string>
+
 </resources>
