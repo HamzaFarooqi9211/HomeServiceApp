@@ -24,7 +24,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="220dp"
-            android:background="#B0A207FA"
+            android:background="#A6665EFF"
             android:orientation="vertical">
 
             <TextView
@@ -67,10 +67,28 @@
         <LinearLayout
             android:id="@+id/textCarousal"
             android:layout_below="@+id/carouselView"
-            android:background="@android:color/black"
+            android:background="#404040"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:orientation="horizontal" />
+            android:layout_height="140dp"
+            android:orientation="vertical" >
+            <TextView
+                android:id="@+id/imageTextHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffff"
+                android:textStyle="bold"
+                android:textSize="34dp"
+                android:text="Electrition"/>
+            <TextView
+                android:id="@+id/imageText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffff"
+                android:textSize="23dp"
+                android:text="Electrition is very nice"/>
+        </LinearLayout>
+
+
 
         <RelativeLayout
             android:layout_below="@+id/textCarousal"
@@ -81,7 +99,7 @@
             android:id="@+id/leftview"
             android:layout_width="80dp"
             android:layout_height="match_parent"
-            android:background="#A207FA"
+            android:background="#665EFF"
             android:orientation="horizontal" />
 
         <LinearLayout
