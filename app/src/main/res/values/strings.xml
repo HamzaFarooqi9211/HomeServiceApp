@@ -9,5 +9,15 @@
     <string name="cnic">CNIC</string>
     <string name="scanned">CNIC Scanned Copy</string>
     <string name="upload">Upload</string>
+    <string name="welcomeMSG">Welcome to Home Service</string>
+    <string name="intro">Needs any type of home service at very reasonable fixed rate?</string>
+    <string name="intro2">DON\'T WORRY YOU ARE AT THE RIGHT PLACE.</string>
+    <string name="intro3">Here are some services that we provide.</string>
+    <string name="needUrgent">Need Urgent home service now? don\'t worry  you just Book A Helper by one tap.</string>
+    <string name="bookahelper">Book A Helper</string>
+    <string name="needajob">Need a job? You can  provide  services  as a helper too.</string>
+    <string name="getajob">Get A Job</string>
+    <string name="ourcharges">Our Charges</string>
+    <string name="serives">Services</string>
 
 </resources>

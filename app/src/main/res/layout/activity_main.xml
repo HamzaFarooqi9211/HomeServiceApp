@@ -1,55 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        android:layout_height="wrap_content">
 
-        <com.google.android.material.appbar.CollapsingToolbarLayout
+        <com.synnapps.carouselview.CarouselView
+            android:id="@+id/carouselView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
-            app:contentScrim="@color/colorPrimary"
-            app:title="@string/app_name">
+            android:layout_height="500dp"
+            app:fillColor="#FFFFFF"
+            app:pageColor="@android:color/transparent"
+            app:radius="6dp"
+            app:slideInterval="3000"
+            app:strokeColor="#FF777777"
+            app:strokeWidth="1dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="#B0A207FA"
+            android:orientation="vertical">
 
             <TextView
-                android:text="Welcome to Home Service"
-                android:textColor="@android:color/white"
-                android:textSize="25sp"
-                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="@string/welcomeMSG"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="250dp"/>
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/intro"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
 
-
-            <androidx.appcompat.widget.Toolbar
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"/>
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/intro2"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:text="@string/intro3"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
 
+        </LinearLayout>
 
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
+        <LinearLayout
+            android:id="@+id/textCarousal"
+            android:layout_below="@+id/carouselView"
+            android:background="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal" />
 
+        <RelativeLayout
+            android:layout_below="@+id/textCarousal"
+            android:layout_width="match_parent"
+            android:layout_height="500dp">
 
-    </com.google.android.material.appbar.AppBarLayout>
+        <LinearLayout
+            android:id="@+id/leftview"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="#A207FA"
+            android:orientation="horizontal" />
 
-<!--    <com.synnapps.carouselview.CarouselView-->
-<!--        android:id="@+id/carouselView"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="200dp"-->
-<!--        app:fillColor="#FFFFFF"-->
-<!--        app:pageColor="@android:color/transparent"-->
-<!--        app:radius="6dp"-->
-<!--        app:slideInterval="3000"-->
-<!--        app:strokeColor="#FF777777"-->
-<!--        app:strokeWidth="1dp" />-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/leftview"
+            android:layout_toRightOf="@+id/leftview"
+            android:orientation="vertical"
+            android:padding="10dp">
 
-</RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/needUrgent"
+                android:textColor="@android:color/black" />
+
+            <Button
+
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/custom_button"
+                android:text="@string/bookahelper"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/needajob"
+                android:textColor="@android:color/black" />
+
+            <Button
+
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/custom_button"
+                android:text="@string/getajob"
+                android:textColor="@android:color/white" />
+
+            <Button
+
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/custom_button"
+                android:text="@string/ourcharges"
+                android:textColor="@android:color/white" />
+
+            <Button
+
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/custom_button"
+                android:text="@string/serives"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -18,10 +18,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        carouselView = findViewById(R.id.carouselView);
-//        carouselView.setPageCount(sampleImages.length);
-//
-//        carouselView.setImageListener(imageListener);
+        carouselView = findViewById(R.id.carouselView);
+        carouselView.setPageCount(sampleImages.length);
+
+        carouselView.setImageListener(imageListener);
     }
 
     ImageListener imageListener = new ImageListener() {
