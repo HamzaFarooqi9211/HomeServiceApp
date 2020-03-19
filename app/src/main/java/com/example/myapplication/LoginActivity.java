@@ -8,21 +8,38 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
     TextView registerButton;
+    Button loginButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
         registerButton = findViewById(R.id.register);
-        registerButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
+        loginButton = findViewById(R.id.loginButton);
+
+        registerButton.setOnClickListener(this);
+        loginButton.setOnClickListener(this);
+
+    }
+
+
+    @Override
+    public void onClick(View v) {
+        Intent intent;
+
+        switch (v.getId()){
+            case R.id.loginButton:
+                intent= new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
-            }
-        });
+                break;
+
+            case R.id.register:
+                intent= new Intent(getApplicationContext(), RegisterActivity.class);
+                startActivity(intent);
+                break;
+        }
     }
 }
