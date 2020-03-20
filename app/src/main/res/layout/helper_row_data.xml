@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="30dp"
+    app:cardElevation="4dp">
+
+    <RelativeLayout
+        android:id="@+id/cleaner"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:src="@drawable/helper" />-->
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/cleaner"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/startTime"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/titleText"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/border"
+            android:text="4:00" />
+
+        <TextView
+            android:id="@+id/to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/startTime"
+            android:layout_marginStart="55dp"
+            android:layout_marginLeft="55dp"
+            android:text="To"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/endTime"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/to"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/border"
+            android:text="5:00" />
+
+        <Button
+            android:id="@+id/gender"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignTop="@+id/endTime"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toEndOf="@+id/endTime"
+            android:layout_toRightOf="@+id/endTime"
+            android:background="@drawable/custom_border"
+            android:drawableEnd="@drawable/ic_arrow_down"
+            android:drawableRight="@drawable/ic_arrow_down"
+            android:text="Male" />
+
+        <Button
+            android:id="@+id/getService"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignTop="@+id/startTime"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="-29dp"
+            android:layout_marginRight="-29dp"
+            android:background="@drawable/custom_button"
+            android:rotation="90"
+            android:text="@string/get_service" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

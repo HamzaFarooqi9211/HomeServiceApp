@@ -1,21 +1,23 @@
 package com.example.myapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.ViewPager;
-
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
+
 import com.synnapps.carouselview.CarouselView;
-import com.synnapps.carouselview.ImageClickListener;
 import com.synnapps.carouselview.ImageListener;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     CarouselView carouselView;
-    TextView textView;
-    TextView textViewHeader;
+    TextView textView, textViewHeader;
+    Button bookHelperButton, getJobButton, ourChargesButton, servicesButton;
 
     int[] sampleImages = {R.drawable.slide1, R.drawable.slide2, R.drawable.slide3};
     String[] textImagesHeading = {"Electrition", "Plumber", "Maasi"};
@@ -28,17 +30,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         carouselView = findViewById(R.id.carouselView);
-        carouselView.setPageCount(sampleImages.length);
         textView = findViewById(R.id.imageText);
-        textViewHeader=findViewById(R.id.imageTextHeading);
+        textViewHeader = findViewById(R.id.imageTextHeading);
+        bookHelperButton = findViewById(R.id.bookHelper);
+        getJobButton = findViewById(R.id.getJob);
+        ourChargesButton = findViewById(R.id.ourCharges);
+        servicesButton = findViewById(R.id.services);
 
         carouselView.addOnPageChangeListener(onPageChangeListener);
         carouselView.setImageListener(imageListener);
-
+        carouselView.setPageCount(sampleImages.length);
+        bookHelperButton.setOnClickListener(this);
+        getJobButton.setOnClickListener(this);
+        ourChargesButton.setOnClickListener(this);
+        servicesButton.setOnClickListener(this);
 
     }
 
-    ViewPager.OnPageChangeListener onPageChangeListener=new ViewPager.OnPageChangeListener() {
+    ViewPager.OnPageChangeListener onPageChangeListener = new ViewPager.OnPageChangeListener() {
         @Override
         public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
             textView.setText(textImages[position]);
@@ -53,8 +62,9 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onPageScrollStateChanged(int state) {
 
-        }};
-    ImageListener imageListener=new ImageListener() {
+        }
+    };
+    ImageListener imageListener = new ImageListener() {
         @Override
         public void setImageForPosition(int position, ImageView imageView) {
 
@@ -63,4 +73,32 @@ public class MainActivity extends AppCompatActivity {
 
         }
     };
+
+    @Override
+    public void onClick(View v) {
+        Intent intent;
+
+        switch (v.getId()){
+            case R.id.bookHelper:
+                intent= new Intent(getApplicationContext(), HelperActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.getJob:
+                intent= new Intent(getApplicationContext(), JobActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.ourCharges:
+                intent= new Intent(getApplicationContext(), HelperActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.services:
+                intent= new Intent(getApplicationContext(), HelperActivity.class);
+                startActivity(intent);
+                break;
+
+        }
+    }
 }

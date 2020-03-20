@@ -19,5 +19,17 @@
     <string name="getajob">Get A Job</string>
     <string name="ourcharges">Our Charges</string>
     <string name="serives">Services</string>
+    <string name="cleaner">Cleaner</string>
+    <string name="get_service">Get Service</string>
+    <string name="laundary">Laundary</string>
+    <string name="utensil">Utensil Washing</string>
+    <string name="baby_sitter">Baby Sitter</string>
+    <string name="patient_care">Patient Care</string>
+    <string name="plumber">Plumber</string>
+    <string name="electrition">Electrition</string>
+    <string name="select">Select</string>
+    <string name="startServices">Start Services</string>
+    <string name="selectpreferable">Select Preferable Timings</string>
+    <string name="done">Done</string>
 
 </resources>

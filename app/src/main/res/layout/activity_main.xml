@@ -77,14 +77,14 @@
                 android:layout_height="wrap_content"
                 android:textColor="#ffff"
                 android:textStyle="bold"
-                android:textSize="34dp"
+                android:textSize="25sp"
                 android:text="Electrition"/>
             <TextView
                 android:id="@+id/imageText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#ffff"
-                android:textSize="23dp"
+                android:textSize="20sp"
                 android:text="Electrition is very nice"/>
         </LinearLayout>
 
@@ -117,7 +117,7 @@
                 android:textColor="@android:color/black" />
 
             <Button
-
+                android:id="@+id/bookHelper"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
@@ -134,7 +134,7 @@
                 android:textColor="@android:color/black" />
 
             <Button
-
+                android:id="@+id/getJob"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
@@ -144,7 +144,7 @@
                 android:textColor="@android:color/white" />
 
             <Button
-
+                android:id="@+id/ourCharges"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
@@ -154,7 +154,7 @@
                 android:textColor="@android:color/white" />
 
             <Button
-
+                android:id="@+id/services"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"

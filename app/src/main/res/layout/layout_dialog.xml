@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#494554">
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/selectpreferable"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/timings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/startTime1"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@drawable/custom_border"
+                android:backgroundTint="@null"
+                android:gravity="center"
+                android:hint="4:00"
+                android:textColorLink="@android:color/white"
+                android:textCursorDrawable="@null"
+                android:textSize="18sp"
+                tools:targetApi="lollipop" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="to"
+                android:textColor="@android:color/white"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/endTime1"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@drawable/custom_border"
+                android:backgroundTint="@null"
+                android:gravity="center"
+                android:hint="4:00"
+                android:textColorLink="@android:color/white"
+                android:textCursorDrawable="@null"
+                android:textSize="18sp"
+                tools:targetApi="lollipop" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/startTime2"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@drawable/custom_border"
+                android:backgroundTint="@null"
+                android:gravity="center"
+                android:hint="4:00"
+                android:textColorLink="@android:color/white"
+                android:textCursorDrawable="@null"
+                android:textSize="18sp"
+                tools:targetApi="lollipop" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="to"
+                android:textColor="@android:color/white"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/endTime2"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@drawable/custom_border"
+                android:backgroundTint="@null"
+                android:gravity="center"
+                android:hint="4:00"
+                android:textColorLink="@android:color/white"
+                android:textCursorDrawable="@null"
+                android:textSize="18sp"
+                tools:targetApi="lollipop" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/startTime3"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@drawable/custom_border"
+                android:backgroundTint="@null"
+                android:gravity="center"
+                android:hint="4:00"
+                android:textColorLink="@android:color/white"
+                android:textCursorDrawable="@null"
+                android:textSize="18sp"
+                tools:targetApi="lollipop" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="to"
+                android:textColor="@android:color/white"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/endTime3"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@drawable/custom_border"
+                android:backgroundTint="@null"
+                android:gravity="center"
+                android:hint="4:00"
+                android:textColorLink="@android:color/white"
+                android:textCursorDrawable="@null"
+                android:textSize="18sp"
+                tools:targetApi="lollipop" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timings"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/doneButton"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:background="@drawable/custom_button"
+            android:text="@string/done"
+            android:textColor="@android:color/white" />
+
+
+    </LinearLayout>
+</RelativeLayout>
