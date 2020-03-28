@@ -6,12 +6,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
     TextView registerButton;
     Button loginButton;
+    EditText phoneText,passText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +22,15 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         registerButton = findViewById(R.id.register);
         loginButton = findViewById(R.id.loginButton);
+        phoneText=findViewById(R.id.phoneText);
+        passText=findViewById(R.id.passText);
+
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if()
+            }
+        });
 
         registerButton.setOnClickListener(this);
         loginButton.setOnClickListener(this);

@@ -20,9 +20,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button bookHelperButton, getJobButton, ourChargesButton, servicesButton;
 
     int[] sampleImages = {R.drawable.slide1, R.drawable.slide2, R.drawable.slide3};
-    String[] textImagesHeading = {"Electrition", "Plumber", "Maasi"};
+    String[] textImagesHeading = {"Electrician", "Plumber", "Maasi"};
 
-    String[] textImages = {"Electrition is very nice", "Plumber is very nice", "Maasi is very nice"};
+    String[] textImages = {"Electrician is very nice", "Plumber is very nice", "Maasi is very nice"};
+    SessionManager sessionManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +45,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         getJobButton.setOnClickListener(this);
         ourChargesButton.setOnClickListener(this);
         servicesButton.setOnClickListener(this);
+        sessionManager=new SessionManager(getApplicationContext());
+
+
 
     }
 
@@ -80,20 +84,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         switch (v.getId()){
             case R.id.bookHelper:
-                intent= new Intent(getApplicationContext(), HelperActivity.class);
+                if(sessionManager.isUserLoggedIn())
+                {
+                    intent=new Intent(getApplicationContext(),HelperActivity.class);
+                }
+                else intent=new Intent(getApplicationContext(),UserLoginActivity.class);
+
                 startActivity(intent);
                 break;
 
             case R.id.getJob:
-                intent= new Intent(getApplicationContext(), JobActivity.class);
+                if(sessionManager.isHelperLoggedIn())
+                {
+                    intent=new Intent(getApplicationContext(),JobActivity.class);
+                }
+                else intent=new Intent(getApplicationContext(),LoginActivity.class);
+
                 startActivity(intent);
-                break;
+
+            break;
+
 
             case R.id.ourCharges:
-                intent= new Intent(getApplicationContext(), HelperActivity.class);
+            intent= new Intent(getApplicationContext(), HelperActivity.class);
                 startActivity(intent);
-                break;
-
             case R.id.services:
                 intent= new Intent(getApplicationContext(), HelperActivity.class);
                 startActivity(intent);

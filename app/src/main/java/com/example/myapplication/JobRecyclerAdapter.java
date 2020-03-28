@@ -24,6 +24,7 @@ public class JobRecyclerAdapter extends RecyclerView.Adapter<JobRecyclerAdapter.
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         View view = layoutInflater.inflate(R.layout.job_row_data, parent, false);
+
         return new ViewHolder(view);
     }
 
@@ -41,6 +42,7 @@ public class JobRecyclerAdapter extends RecyclerView.Adapter<JobRecyclerAdapter.
 
         TextView title;
         Button selectButton;
+
 
         ViewHolder(@NonNull View itemView) {
             super(itemView);
