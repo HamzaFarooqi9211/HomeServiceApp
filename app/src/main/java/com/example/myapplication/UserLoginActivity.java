@@ -1,20 +1,19 @@
 package com.example.myapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
+import androidx.appcompat.app.AppCompatActivity;
 
+public class UserLoginActivity extends AppCompatActivity implements View.OnClickListener {
     TextView registerButton;
     Button loginButton;
-    EditText phoneText,passText;
-
+    TextView phoneText;
+    TextView passText;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,13 +23,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         loginButton = findViewById(R.id.loginButton);
         phoneText=findViewById(R.id.phoneText);
         passText=findViewById(R.id.passText);
-
-        loginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if()
-            }
-        });
 
         registerButton.setOnClickListener(this);
         loginButton.setOnClickListener(this);
