@@ -6,19 +6,82 @@
     tools:context=".ViewAllHelpersActivity">
 
     <TextView
+        android:id="@+id/admin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center_horizontal"
+        android:text="@string/admin_pannel"
+        android:textColor="#5574F7"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/admin"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/users"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button_blue"
+            android:text="@string/view_users"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/helpers"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button_blue"
+            android:text="@string/view_helpers"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button_blue"
+            android:text="@string/view_users"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button_blue"
+            android:text="@string/view_helpers"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <TextView
         android:id="@+id/allusers"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
+        android:layout_below="@+id/buttons"
+        android:gravity="center_horizontal"
         android:text="All Helpers"
-        android:textColor="#5574F7" />
+        android:textColor="#5574F7"
+        android:textSize="30sp" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_marginTop="10dp"
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/allusers" />
+        android:layout_below="@+id/allusers"
+        android:layout_marginTop="10dp" />
+
 
 </RelativeLayout>

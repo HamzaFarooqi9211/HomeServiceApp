@@ -69,7 +69,6 @@ public class ViewAllUserRecyclerAdapter extends RecyclerView.Adapter<ViewAllUser
         }
 
         private void openDialog() {
-
             ViewAllUserDialog dialog = new ViewAllUserDialog();
             dialog.show(((AppCompatActivity) context).getSupportFragmentManager(), "User Details");
 

@@ -35,5 +35,8 @@
     <string name="female">Female</string>
     <string name="address">Address</string>
     <string name="gender">Gender</string>
+    <string name="admin_pannel">Admin Pannel</string>
+    <string name="view_users">Users</string>
+    <string name="view_helpers">Helpers</string>
 
 </resources>

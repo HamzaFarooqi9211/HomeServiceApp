@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
-class ViewAllHelperDialog extends AppCompatDialogFragment {
+public class ViewAllHelperDialog extends AppCompatDialogFragment {
 
     @NonNull
     @Override

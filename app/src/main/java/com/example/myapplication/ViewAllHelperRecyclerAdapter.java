@@ -69,7 +69,6 @@ class ViewAllHelperRecyclerAdapter extends RecyclerView.Adapter<ViewAllHelperRec
         }
 
         private void openDialog() {
-
             ViewAllHelperDialog dialog = new ViewAllHelperDialog();
             dialog.show(((AppCompatActivity) context).getSupportFragmentManager(), "User Details");
 
