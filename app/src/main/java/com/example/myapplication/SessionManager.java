@@ -83,14 +83,6 @@ public class SessionManager {
         return user;
     }
 
-    public static void startUserSesssion(String phone)
-    {
-
-    }
-    public static void startHelperSesssion(String phone)
-    {
-
-    }
 
     public HashMap<String, String> getHelperDetails(){
         HashMap<String, String> user = new HashMap<String, String>();

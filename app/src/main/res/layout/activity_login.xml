@@ -64,10 +64,11 @@
         android:text="@string/forgotpass"
         android:textColor="@android:color/white" />
     <TextView
+        android:id="@+id/errorMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Invalid username or password"
+        android:text=""
         android:layout_below="@id/forgotPass"
         android:layout_centerHorizontal="true"
         android:textSize="17dp"
