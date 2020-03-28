@@ -21,7 +21,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     TextView registerButton;
     Button loginButton;
-    TextInputLayout phoneText,passText;
+    EditText phoneText,passText;
     TextView errorMsg;
     FirebaseFirestore db;
     final static String TAG="MyActivity";
@@ -39,11 +39,24 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         db= FirebaseFirestore.getInstance();
 
 
-        loginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final String phone=phoneText.getEditText().getText().toString();
-                final String password=passText.getEditText().getText().toString();
+
+
+        registerButton.setOnClickListener(this);
+        loginButton.setOnClickListener(this);
+
+    }
+
+
+    @Override
+    public void onClick(View v) {
+        Intent intent;
+
+        switch (v.getId()){
+
+            case R.id.loginButton:
+                Log.w(TAG,"Login clicked");
+                final String phone=phoneText.getText().toString();
+                final String password=passText.getText().toString();
                 if(phone == "" || password=="")
                 {
                     errorMsg.setText("Please fill all fields");
@@ -72,25 +85,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         }
                     });
                 }
-            }
-        });
 
-        registerButton.setOnClickListener(this);
-        loginButton.setOnClickListener(this);
-
-    }
-
-
-    @Override
-    public void onClick(View v) {
-        Intent intent;
-
-        switch (v.getId()){
-            case R.id.loginButton:
-                intent= new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
                 break;
-
             case R.id.register:
                 intent= new Intent(getApplicationContext(), RegisterActivity.class);
                 startActivity(intent);
