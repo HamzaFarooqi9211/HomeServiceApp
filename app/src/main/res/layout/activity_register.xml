@@ -79,7 +79,6 @@
                 android:inputType="text"
                 android:textColor="@android:color/white" />
         </com.google.android.material.textfield.TextInputLayout>
-
     </LinearLayout>
 
     <TextView
@@ -108,7 +107,7 @@
         android:layout_toRightOf="@+id/attachIcon"
         android:background="@drawable/custom_border"
         android:text="@string/upload"
-        android:textColor="@color/colorPrimary" />
+        android:textColor="#5574F7" />
 
     <Button
         android:id="@+id/registerButton"
@@ -118,7 +117,7 @@
         android:layout_marginTop="30dp"
         android:background="@drawable/custom_border"
         android:text="@string/register"
-        android:textColor="@color/colorPrimary" />
+        android:textColor="#5574F7" />
 
 
     <TextView

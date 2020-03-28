@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
@@ -16,7 +17,7 @@ import com.synnapps.carouselview.ImageListener;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     CarouselView carouselView;
-    TextView textView, textViewHeader;
+    TextView textView, textViewHeader, signinTextView;
     Button bookHelperButton, getJobButton, ourChargesButton, servicesButton;
 
     int[] sampleImages = {R.drawable.slide1, R.drawable.slide2, R.drawable.slide3};
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         getJobButton = findViewById(R.id.getJob);
         ourChargesButton = findViewById(R.id.ourCharges);
         servicesButton = findViewById(R.id.services);
+        signinTextView = findViewById(R.id.signin);
 
         carouselView.addOnPageChangeListener(onPageChangeListener);
         carouselView.setImageListener(imageListener);
@@ -45,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         getJobButton.setOnClickListener(this);
         ourChargesButton.setOnClickListener(this);
         servicesButton.setOnClickListener(this);
+        signinTextView.setOnClickListener(this);
         sessionManager=new SessionManager(getApplicationContext());
 
 
@@ -101,18 +104,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 else intent=new Intent(getApplicationContext(),LoginActivity.class);
 
                 startActivity(intent);
-
-            break;
-
+                break;
 
             case R.id.ourCharges:
-            intent= new Intent(getApplicationContext(), HelperActivity.class);
+                intent= new Intent(getApplicationContext(), HelperActivity.class);
                 startActivity(intent);
+                break;
+
             case R.id.services:
                 intent= new Intent(getApplicationContext(), HelperActivity.class);
                 startActivity(intent);
                 break;
 
+            case R.id.signin:
+                intent= new Intent(getApplicationContext(), ViewAllUsersActivity.class);
+                startActivity(intent);
+                break;
         }
     }
 }

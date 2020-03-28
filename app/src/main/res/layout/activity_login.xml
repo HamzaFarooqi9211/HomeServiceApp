@@ -53,7 +53,7 @@
         android:layout_marginTop="30dp"
         android:background="@drawable/custom_border"
         android:text="@string/Signin"
-        android:textColor="@color/colorPrimary" />
+        android:textColor="#5574F7" />
 
 
     <TextView
