@@ -4,7 +4,6 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -12,19 +11,18 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
-class ViewAllHelperRecyclerAdapter extends RecyclerView.Adapter<ViewAllHelperRecyclerAdapter.ViewHolder> {
-
+class FragmentUserRecyclerAdapter extends RecyclerView.Adapter<FragmentUserRecyclerAdapter.ViewHolder> {
     private Context context;
 
-    ViewAllHelperRecyclerAdapter(Context applicationContext) {
-        this.context = applicationContext;
+    public FragmentUserRecyclerAdapter(Context context) {
+        this.context = context;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View view = layoutInflater.inflate(R.layout.allhelpers_row_data, parent, false);
+        View view = layoutInflater.inflate(R.layout.user_notification_row_data, parent, false);
         return new ViewHolder(view);
     }
 
@@ -38,38 +36,27 @@ class ViewAllHelperRecyclerAdapter extends RecyclerView.Adapter<ViewAllHelperRec
         return 7;
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView name, phone;
-        ImageView closeButton;
+        TextView notify;
         RelativeLayout layout;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            name = itemView.findViewById(R.id.name);
-            phone = itemView.findViewById(R.id.phone);
-            closeButton = itemView.findViewById(R.id.close);
+            notify = itemView.findViewById(R.id.notify);
             layout = itemView.findViewById(R.id.card);
 
-            layout.setOnClickListener(this);
-            closeButton.setOnClickListener(this);
-        }
-
-        @Override
-        public void onClick(View v) {
-            switch (v.getId()) {
-                case R.id.close:
-                    break;
-
-                case R.id.card:
+            layout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
                     openDialog();
-                    break;
-            }
+                }
+            });
         }
 
         private void openDialog() {
-            ViewAllHelperDialog dialog = new ViewAllHelperDialog();
+            FragmentUserDialog dialog = new FragmentUserDialog();
             dialog.show(((AppCompatActivity) context).getSupportFragmentManager(), "Helper Details");
 
         }

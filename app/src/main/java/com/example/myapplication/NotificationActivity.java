@@ -24,7 +24,7 @@ public class NotificationActivity extends AppCompatActivity {
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.AddFragment(new FragmentUserNotification(), "User");
-        adapter.AddFragment(new FragmentUserNotification(), "Helper");
+        adapter.AddFragment(new FragmentHelperNotification(), "Helper");
 
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
