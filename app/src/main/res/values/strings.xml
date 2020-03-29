@@ -38,5 +38,7 @@
     <string name="admin_pannel">Admin Pannel</string>
     <string name="view_users">Users</string>
     <string name="view_helpers">Helpers</string>
+    <string name="notification">Notification</string>
+    <string name="timing">Timing</string>
 
 </resources>

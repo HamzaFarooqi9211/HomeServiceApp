@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     CarouselView carouselView;
     TextView textView, textViewHeader, signinTextView;
     Button bookHelperButton, getJobButton, ourChargesButton, servicesButton;
+    ImageView notifyButton;
 
     int[] sampleImages = {R.drawable.slide1, R.drawable.slide2, R.drawable.slide3};
     String[] textImagesHeading = {"Electrician", "Plumber", "Maasi"};
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ourChargesButton = findViewById(R.id.ourCharges);
         servicesButton = findViewById(R.id.services);
         signinTextView = findViewById(R.id.signin);
+        notifyButton = findViewById(R.id.notify);
 
         carouselView.addOnPageChangeListener(onPageChangeListener);
         carouselView.setImageListener(imageListener);
@@ -48,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ourChargesButton.setOnClickListener(this);
         servicesButton.setOnClickListener(this);
         signinTextView.setOnClickListener(this);
+        notifyButton.setOnClickListener(this);
         sessionManager=new SessionManager(getApplicationContext());
 
 
@@ -118,6 +121,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.signin:
                 intent= new Intent(getApplicationContext(), ViewAllUsersActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.notify:
+                intent= new Intent(getApplicationContext(), NotificationActivity.class);
                 startActivity(intent);
                 break;
         }

@@ -24,17 +24,30 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
             android:background="#A6665EFF"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="10dp">
 
-            <TextView
-                android:id="@+id/signin"
-                android:layout_gravity="end"
-                android:text="@string/Signin"
-                android:textColor="@android:color/white"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/notify"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_notifications_white" />
+
+                <TextView
+                    android:id="@+id/signin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/Signin"
+                    android:textColor="@android:color/white" />
+            </RelativeLayout>
 
             <TextView
                 android:layout_width="match_parent"
@@ -75,102 +88,104 @@
 
         <LinearLayout
             android:id="@+id/textCarousal"
-            android:layout_below="@+id/carouselView"
-            android:background="#404040"
             android:layout_width="match_parent"
             android:layout_height="140dp"
-            android:orientation="vertical" >
+            android:layout_below="@+id/carouselView"
+            android:background="#404040"
+            android:orientation="vertical">
+
             <TextView
                 android:id="@+id/imageTextHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="Electrition"
                 android:textColor="#ffff"
-                android:textStyle="bold"
                 android:textSize="25sp"
-                android:text="Electrition"/>
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/imageText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="Electrition is very nice"
                 android:textColor="#ffff"
-                android:textSize="20sp"
-                android:text="Electrition is very nice"/>
+                android:textSize="20sp" />
         </LinearLayout>
 
         <RelativeLayout
-            android:layout_below="@+id/textCarousal"
             android:layout_width="match_parent"
-            android:layout_height="500dp">
+            android:layout_height="500dp"
+            android:layout_below="@+id/textCarousal">
 
-        <LinearLayout
-            android:id="@+id/leftview"
-            android:layout_width="80dp"
-            android:layout_height="match_parent"
-            android:background="#665EFF"
-            android:orientation="horizontal" />
+            <LinearLayout
+                android:id="@+id/leftview"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:background="#665EFF"
+                android:orientation="horizontal" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/leftview"
-            android:layout_toRightOf="@+id/leftview"
-            android:orientation="vertical"
-            android:padding="10dp">
-
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/needUrgent"
-                android:textColor="@android:color/black" />
+                android:layout_toEndOf="@+id/leftview"
+                android:layout_toRightOf="@+id/leftview"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-            <Button
-                android:id="@+id/bookHelper"
-                android:layout_width="150dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/custom_button"
-                android:text="@string/bookahelper"
-                android:textColor="@android:color/white" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/needUrgent"
+                    android:textColor="@android:color/black" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:text="@string/needajob"
-                android:textColor="@android:color/black" />
+                <Button
+                    android:id="@+id/bookHelper"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/custom_button"
+                    android:text="@string/bookahelper"
+                    android:textColor="@android:color/white" />
 
-            <Button
-                android:id="@+id/getJob"
-                android:layout_width="150dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/custom_button"
-                android:text="@string/getajob"
-                android:textColor="@android:color/white" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/needajob"
+                    android:textColor="@android:color/black" />
 
-            <Button
-                android:id="@+id/ourCharges"
-                android:layout_width="150dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/custom_button"
-                android:text="@string/ourcharges"
-                android:textColor="@android:color/white" />
+                <Button
+                    android:id="@+id/getJob"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/custom_button"
+                    android:text="@string/getajob"
+                    android:textColor="@android:color/white" />
 
-            <Button
-                android:id="@+id/services"
-                android:layout_width="150dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/custom_button"
-                android:text="@string/serives"
-                android:textColor="@android:color/white" />
+                <Button
+                    android:id="@+id/ourCharges"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/custom_button"
+                    android:text="@string/ourcharges"
+                    android:textColor="@android:color/white" />
 
-        </LinearLayout>
+                <Button
+                    android:id="@+id/services"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/custom_button"
+                    android:text="@string/serives"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
 
         </RelativeLayout>
 
